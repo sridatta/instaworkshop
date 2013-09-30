@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+module:testrunner
+
+# XHR namespace
+GET     /api/workshops                          App.List
+POST    /api/workshops                          App.Create
+WS      /api/workshops/:image                    App.Attach
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/*filepath                       Static.Serve("public")
+
+# Redirect home to angular index
+*       /                                       App.Index
+
+# Anything in /app prefix belongs to angular router
+GET       /app/                                 Static.Serve("public/index.html")
+GET       /app/*wildcard                        Static.Serve("public/index.html")

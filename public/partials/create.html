@@ -1,0 +1,17 @@
+<h1>Create Workshop</h1>
+<form role="form" ng-submit="createImage()">
+  <div class="form-group">
+    <label for="workshop-name">Workshop name</label>
+    <input type="text" class="form-control" id="workshop-name" placeholder="Regex Workshop" ng-model="name">
+  </div>
+  <div class="form-group">
+    <label for="script">Setup script</label>
+    <textarea ng-model="script" class="form-control terminal" rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputFile">Default files</label>
+    <input type="file" id="files" file-change="setFile">
+  </div>
+   <button type="submit" class="btn btn-default">Submit</button>
+</form>

@@ -1,0 +1,15 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <th> Workshop </th>
+  </thead>
+  <tr ng-repeat="w in workshops">
+    <td>{{w.Tag}}</td>
+    <td>
+      <a
+        href="#/attach/{{w.Tag}}"
+        class="btn btn-primary">Launch</button>
+    </td>
+  </tr>
+</table>
+
+<a href="#/create" class="btn btn-lg btn-success">Create Workshop</a>
